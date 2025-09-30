@@ -1,11 +1,15 @@
-<script>
-	import favicon from '$lib/assets/favicon.svg';
-
-	let { children } = $props();
-</script>
-
 <svelte:head>
-	<link rel="icon" href={favicon} />
+  <title>My App</title>
 </svelte:head>
 
-{@render children?.()}
+<div class="container">
+  <slot />
+</div>
+
+<style>
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+</style>
